@@ -21,7 +21,7 @@ public class UDPClient {
         try {
             socket = new DatagramSocket();
             address = InetAddress.getByName("localhost");
-            printWriter = new PrintWriter(new FileWriter("logger.txt",true));
+            printWriter = new PrintWriter(new FileWriter("./distributed_systems_assignment1/logger.txt",true));
             buf2 = new byte[1024];
         } catch(Exception e) {
             e.printStackTrace();
@@ -71,7 +71,7 @@ public class UDPClient {
         try {        
             while(count < 120) {
                 String response = udpClient.sendEcho("Sai Ram");
-                TimeUnit.SECONDS.sleep(2);
+                TimeUnit.SECONDS.sleep(60);
                 count ++;
                 System.out.println(response);
             } 
