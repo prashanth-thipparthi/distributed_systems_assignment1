@@ -51,7 +51,8 @@ public class UDPClient {
                 System.out.println(values.length);
                 System.out.println("No response from server");
             }else {
-                printWriter.printf("\n Client side: Sent = %d , received = %d -- server side: received = %s, sent = %s",requestSent,requestReceive,values[0],values[1]);
+                //printWriter.printf("\n Client side: Sent = %d , received = %d -- server side: received = %s, sent = %s",requestSent,requestReceive,values[0],values[1]);
+                printWriter.printf("\n%d %d %s %s",requestSent,requestReceive,values[0],values[1]);
             }
         } catch(Exception e) {
             e.printStackTrace();
@@ -68,7 +69,7 @@ public class UDPClient {
         int count = 0;
 
         try {        
-            while(count < 5) {
+            while(count < 120) {
                 String response = udpClient.sendEcho("Sai Ram");
                 TimeUnit.SECONDS.sleep(2);
                 count ++;
