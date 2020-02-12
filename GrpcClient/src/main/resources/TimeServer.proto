@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.grpc"; 
+
+service TimeServer {
+   // Obtains the Message and returns the server times.
+    rpc getTime(Msg) returns (Times) {}
+}
+
+message Msg {
+  string msg = 1;
+}
+
+message Times {
+  uint64 received = 1;
+  uint64 sent = 2;
+}

@@ -6,9 +6,6 @@ import java.io.PrintWriter;
 import java.net.*;
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
 public class UDPClient {
     private DatagramSocket socket;
