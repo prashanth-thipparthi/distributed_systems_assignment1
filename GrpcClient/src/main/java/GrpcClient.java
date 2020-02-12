@@ -41,7 +41,7 @@ public class GrpcClient {
 					//printWriter.printf("\n Client side: Sent = %d , received = %d -- server side: received = %s, sent = %s",requestSent,requestReceive,values[0],values[1]);
 					printWriter.printf("\n%d %d %s %s",requestSent,requestReceived,response.getReceived(),response.getSent());
 				}
-				TimeUnit.SECONDS.sleep(1);
+				TimeUnit.SECONDS.sleep(60);
 				count ++;
 			}
 			printWriter.close();
